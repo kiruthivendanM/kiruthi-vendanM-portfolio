@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiruthi Vendan M | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', sans-serif; color: #1f2937; overflow-x: hidden; scroll-behavior: smooth; background: linear-gradient(135deg, #fef3c7, #e0e7ff, #fce7f3); }
+
+    header {
+      text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #ec4899, #8b5cf6, #22d3ee); color: #fff;
+    }
+    header h1 {
+      font-size: 44px; margin-bottom: 12px; background: linear-gradient(90deg, #fff, #fde68a); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    header p { font-size: 18px; opacity: 0.95; }
+
+    nav {
+      position: sticky; top: 0; background: linear-gradient(90deg, #4f46e5, #9333ea); padding: 14px; text-align: center; z-index: 100;
+    }
+    nav a { color: #fff; margin: 0 18px; text-decoration: none; font-weight: 600; position: relative; }
+    nav a::after { content: ''; position: absolute; width: 0; height: 3px; background: #fde68a; left: 0; bottom: -6px; transition: width 0.3s ease; }
+    nav a:hover::after { width: 100%; }
+
+    section { padding: 80px 20px; max-width: 1100px; margin: auto; }
+
+    h2 { font-size: 34px; margin-bottom: 35px; color: #4f46e5; position: relative; }
+    h2::after { content: ''; position: absolute; width: 70px; height: 5px; background: linear-gradient(90deg, #ec4899, #8b5cf6); bottom: -12px; left: 0; border-radius: 10px; }
+
+    .card { background: linear-gradient(135deg, #ffffff, #fdf4ff); padding: 35px; margin: 30px 0; border-radius: 22px; box-shadow: 0 25px 45px rgba(139,92,246,0.25); transition: transform 0.4s ease, box-shadow 0.4s ease; border-left: 8px solid #8b5cf6; }
+    .card:hover { transform: translateY(-12px) scale(1.02); box-shadow: 0 35px 65px rgba(236,72,153,0.35); }
+
+    .skills { display: flex; flex-wrap: wrap; gap: 14px; }
+    .skills span { background: linear-gradient(135deg, #22d3ee, #4f46e5); color: #fff; padding: 10px 20px; border-radius: 999px; font-size: 14px; font-weight: 600; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .skills span:hover { transform: scale(1.1); box-shadow: 0 12px 25px rgba(34,211,238,0.6); }
+
+    .btn { display: inline-block; margin-top: 22px; padding: 14px 26px; background: linear-gradient(135deg, #ec4899, #8b5cf6); color: #fff; border-radius: 999px; text-decoration: none; font-weight: 700; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .btn:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 18px 35px rgba(236,72,153,0.5); }
+
+    footer { background: linear-gradient(90deg, #4f46e5, #9333ea); color: #fff; text-align: center; padding: 40px 20px; margin-top: 100px; font-size: 14px; }
+
+    .hidden { display: none; }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 34px; }
+      nav a { margin: 0 10px; }
+      section { padding: 60px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Kiruthi Vendan M</h1>
+  <p>Electronics and Communication Engineering | VLSI & FPGA Enthusiast | java developer</p>
+  <p>Email: vendankiruthi@gmail.com | Phone: +91 91597 29249</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#mini">Mini Project</a>
+  <a href="#education">Education</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>Electronics and Communication Engineering graduate with strong fundamentals in VLSI design, FPGA implementation, digital electronics, and embedded systems. Proficient in C programming, Core Java, HDL, and frontend technologies including HTML, CSS, and JavaScript. Hands-on experience in FPGA-based signal processing, real-time monitoring systems, and client-side web application development. Passionate about hardware design, problem-solving, and building efficient engineering solutions. Seeking an entry-level opportunity in VLSI, FPGA development, hardware design, or embedded systems.</p>
+</section>
+
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <span>C</span><span>Core Java</span><span>HDL</span><span>VLSI</span><span>FPGA</span>
+    <span>Digital Electronics</span><span>Signal Processing</span><span>Embedded Systems</span>
+    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Microwind</span><span>VS Code</span>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="card">
+    <h3>FPGA Implementation of 8th Order ECG Filter</h3>
+    <button class="btn" onclick="toggle('p1')">View Details</button>
+    <div id="p1" class="hidden">
+      <ul>
+        <li>Designed 8th-order ECG digital filter on FPGA</li>
+        <li>Optimized power and hardware using truncated multipliers</li>
+        <li>Analyzed area, power, and speed trade-offs</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Real-Time Water Pressure Detection System</h3>
+    <button class="btn" onclick="toggle('p2')">View Details</button>
+    <div id="p2" class="hidden">
+      <ul>
+        <li>Real-time monitoring using sensor networks</li>
+        <li>Improved emergency response readiness</li>
+        <li>Embedded system-based design</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="mini">
+  <h2>Mini Project (3rd Year)</h2>
+  <div class="card">
+    <h3>Interactive Book Management Web Application</h3>
+    <button class="btn" onclick="toggle('mini1')">View Features</button>
+    <div id="mini1" class="hidden">
+      <ul>
+        <li>Dynamic add and delete book functionality</li>
+        <li>JavaScript DOM manipulation</li>
+        <li>Developed using Visual Studio Code</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="card">
+    <h3>B.E – Electronics and Communication Engineering</h3>
+    <p>Manakula Vinayagar Institute of Technology</p>
+    <p>CGPA: 74%</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Kiruthi Vendan M | Portfolio</p>
+</footer>
+
+<script>
+  function toggle(id) { document.getElementById(id).classList.toggle('hidden'); }
+</script>
+
+</body>
+</html>
